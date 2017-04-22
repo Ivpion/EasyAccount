@@ -11,7 +11,7 @@ public class SuppliersGoodsStore{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int store_id;
+    private int id;
 
     @Column(name = "prise", nullable = false)
     private double price;
@@ -32,7 +32,7 @@ public class SuppliersGoodsStore{
     }
 
     public int getId() {
-        return store_id;
+        return id;
     }
 
     public double getPrice() {

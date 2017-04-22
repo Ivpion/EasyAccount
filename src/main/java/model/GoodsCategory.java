@@ -1,7 +1,6 @@
 package model;
 
 import javax.persistence.*;
-import java.util.Set;
 
 /**
  * Created by ivan on 12.04.17.
@@ -14,15 +13,13 @@ public class GoodsCategory{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int category_id;
+    private int id;
 
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "categories", fetch = FetchType.LAZY)
-    private Set<Goods> goods;
-
-
+   /* @OneToMany(mappedBy = "categories", fetch = FetchType.LAZY)
+    private Set<Goods> goods;*/
 
     public GoodsCategory() {
     }
@@ -32,7 +29,7 @@ public class GoodsCategory{
     }
 
     public int getId() {
-        return category_id;
+        return id;
     }
 
     public String getName() {
@@ -41,5 +38,13 @@ public class GoodsCategory{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "GoodsCategory{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

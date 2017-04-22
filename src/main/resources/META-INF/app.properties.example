@@ -1,0 +1,4 @@
+db.url=jdbc:mysql://localhost:3306/EasyAccount
+db.user= "your user"
+db.pass= "your pass"
+db.driver=com.mysql.jdbc.Driver

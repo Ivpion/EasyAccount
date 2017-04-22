@@ -11,7 +11,7 @@ public class Goods{
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        private int good_id;
+        private int id;
 
         @Column(name  = "goods_name", nullable = false)
         private String name;
@@ -50,6 +50,15 @@ public class Goods{
         }
 
         public int getId() {
-                return good_id;
+                return id;
+        }
+
+        @Override
+        public String toString() {
+                return "Goods{" +
+                        "id=" + id +
+                        ", name='" + name + '\'' +
+                        ", categories=" + categories +
+                        '}';
         }
 }

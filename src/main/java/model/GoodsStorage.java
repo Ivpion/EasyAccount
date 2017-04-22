@@ -11,7 +11,7 @@ public class GoodsStorage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int storage_id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "goods_id", referencedColumnName = "id", nullable = false)
@@ -33,7 +33,7 @@ public class GoodsStorage {
     }
 
     public int getId() {
-        return storage_id;
+        return id;
     }
 
     public Goods getGoods() {

@@ -21,19 +21,27 @@ public class Tests {
         Supplier supplier2 = new Supplier("220", "Uman");
         Supplier supplier3 = new Supplier("Horos", "Kharkiv");
 
-        GoodsCategory goodsCategory = new GoodsCategory("rozetka");
+        GoodsCategory goodsCategory1 = new GoodsCategory("rozetka");
+        GoodsCategory goodsCategory2 = new GoodsCategory("lampa");
 
-        Goods goods1 = new Goods("e.next2x2", goodsCategory);
+        Goods goods1 = new Goods("e.next2x2", goodsCategory1);
+        Goods goods2 = new Goods("e.next3x2", goodsCategory1);
+        Goods goods3 = new Goods("e.next4x2", goodsCategory2);
 
 
 
         manager.getTransaction().begin();
-        manager.persist(goodsCategory);
+        manager.persist(goodsCategory2);
+        manager.persist(goodsCategory1);
         manager.persist(goods1);
-
+        manager.persist(goods2);
+        manager.persist(goods3);
         manager.persist(supplier1);
         manager.persist(supplier2);
         manager.persist(supplier3);
         manager.getTransaction().commit();
+
+        System.out.println(goodsCategory1);
+        System.out.println(goodsCategory2);
     }
 }

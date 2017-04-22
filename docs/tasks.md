@@ -17,6 +17,7 @@
 * name
 * category_id
 
+
 ## Goods category
 * id
 * name
@@ -26,10 +27,16 @@
 * goods_id
 * count
 * price
+* supplier_id (?)
 
 ## Suppliers goods store
-* id
 * supplier_id
 * goods_id
 * price
+
+supplier_id       goods_id       price
+       1             1              20
+       2             1              22
+       2             2              40
+       1             2              36
 

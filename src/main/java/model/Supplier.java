@@ -12,7 +12,7 @@ public class Supplier{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int supplier_id;
+    private int id;
 
     @Column(name = "name", nullable = false)
     private String name;
@@ -59,6 +59,6 @@ public class Supplier{
     }
 
     public int getId() {
-        return supplier_id;
+        return id;
     }
 }
